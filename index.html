@@ -554,7 +554,7 @@ async function doWa(btn){
     if(e&&e.name==="AbortError")pmsg("");
     else if(e&&e.name==="NotAllowedError"){waFile=f;waLabel("Tap again to share");pmsg("PDF is ready. Tap the green button once more to share it.")}
     else throw e}
-  }else{
+  }else{ 
    saveBlob(f,f.name);
    window.open("https://wa.me/?text="+encodeURIComponent(title+" - PDF attached"),"_blank","noopener");
    pmsg("PDF saved. WhatsApp is opening: attach the saved PDF to your chat.")}
